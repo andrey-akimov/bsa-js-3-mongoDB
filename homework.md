@@ -42,9 +42,12 @@ db.homework.update(
         name: "Dusti Lemmond"
     },
     {
-        $set: {troll: false}
+        $set: {
+            accepted: true
+        }
     },
     {
         multi: true
-    })
+    }
+)
 ```
