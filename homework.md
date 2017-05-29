@@ -37,16 +37,14 @@ db.homework.aggregate([
 
 3. Студентам с именем Dusti Lemmond добавить поле “accepted” со значением true.
 ```javascript
-db.homework.aggregate([  
-   {  
-      $match:{  
-         name:"Dusti Lemmond"
-      }
-   },
-   {  
-      $addFields:{  
-         "accepted":true
-      }
-   }
-]);
+db.homework.update(
+    {
+        name: "Dusti Lemmond"
+    },
+    {
+        $set: {troll: false}
+    },
+    {
+        multi: true
+    })
 ```
